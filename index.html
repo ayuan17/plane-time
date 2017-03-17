@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Flight Scheduler</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+<body>
+<div class="container">
+
+    <br>
+
+   <div>
+        <h1 class="jumbotron">Flight Scheduler</h1>
+   </div>
+<!-- Flight Information Panel -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Current Flights</h3>
+                </div>
+
+                <table class="table table-striped" id="table">
+                    <tr>
+                        <th>Flight Name</th>
+                        <th>Destination</th>
+                        <th>Frequency (min)</th>
+                        <th>Next Arrival</th>
+                        <th>Minutes away</th>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+
+    <!-- Flight Scheduler Panel -->
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add Flights</h3>
+            </div>
+            <div class="panel-body">
+                    <form role="form">
+
+                        <div class="form-group">
+                            <label for="flight-input">Flight Name</label>
+                            <input class="form-control" id="flight-input" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <input class="form-control" id="destination" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="flight-time">First Flight Time</label>
+                            <input class="form-control" id="flight-time" type="text">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="frequency">Frequency</label>
+                            <input class="form-control" id="frequency" type="number">
+                        </div>
+
+                        <button class="btn btn-default" id="add-flight" type="submit">Submit</button>
+
+                    </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<script src="assets/javascript/main.js"></script>
+</body>
+</html>
